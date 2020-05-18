@@ -11,3 +11,4 @@ for (int i = 0; i <= 1; i++){
 cout << "nim ke- " << i+1 << "=" << nim [i] << "\n";
 	}
 }
+
