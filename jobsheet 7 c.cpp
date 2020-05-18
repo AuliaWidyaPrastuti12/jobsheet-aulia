@@ -7,3 +7,4 @@ main (){
 		scanf ("%i", &nim[i]);
 	}
 }
+
