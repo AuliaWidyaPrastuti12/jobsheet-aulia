@@ -9,3 +9,4 @@ printf("Masukan Nim:[%d][%d]=",i,j);
 	}
 }
 }
+
