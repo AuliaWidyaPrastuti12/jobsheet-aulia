@@ -9,3 +9,4 @@ cout<<"Masukan Nim: ["<<i<<"]["<<j<<"]=";
 cin>>nama[i][j];}
 }
 }
+
