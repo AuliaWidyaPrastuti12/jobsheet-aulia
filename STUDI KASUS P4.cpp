@@ -1,0 +1,170 @@
+#include<iostream>    
+#include<string>
+using namespace std;
+
+int a,b,x,c;
+int saldo=500000;
+int z=5000;
+int sisapulsa;
+int nominal;
+char nomor[12], angka;
+string list[4]={"internet Paket ","Paket sms","Paket nelpon","Bagi pulsa"};
+void listp(string list[]){system("cls");
+cout<<"           MENU PILIHAN                                        \n";
+cout<<"Pulsa 500000 s.d 15 Agustus 2020.\n";
+for(int i=0;i<4;i++){
+	cout<<" "<<i<<". "<<list[i]<<"\t"<<endl;
+}cout<<endl;
+}
+void internet(){system("cls");
+	cout<<"===========Pilihan Paket Internet============";
+cout<<" "<<"\n";
+cout<<"1. Paket internet sebulan 30 GB : 55000\n";
+cout<<"2. Paket STREAMING Netflix Rp. 50000\n";
+cout<<"Pilih paket (1/2): "; cin>>a;
+if (a==1)
+{
+cout<<"Anda memilih paket internet sebulan 30 GB : 55000 \n";
+cout<<"SISA SALDO PULSA ANDA= ";
+cout<<saldo-55000<<endl;
+}
+else if(a==2)
+{
+cout<<"Anda Memilih Paket STREAMING Netflix Rp. 50000\n";
+cout<<"SISA SALDO PULSA ANDA= ";
+cout<<saldo-50000<<endl;
+}
+else
+{
+cout<<"\nanda tidak memilih 1/2.";
+}}
+void smsan(){system("cls");
+	cout<<"=========Anda memilih paket SMS==========";
+cout<<" "<<"\n";
+cout<<"1. Paket SMS-an MINGGUAN Rp. 10000\n";
+cout<<"2. Paket  SMS-an SEBULAN  Rp. 30000\n";
+cout<<"Pilih paket (1/2): "; cin>>b;
+if (b==1)
+{
+cout<<"Anda Memilih Paket SMS-an MINGGUAN Rp. 10000\n";
+cout<<"SISA SALDO PULSA ANDA= ";
+cout<<saldo-10000<<endl;
+}
+else if(b==2)
+{
+cout<<"Anda Memilih Paket  SMS-an SEBULAN  Rp. 30000\n";
+cout<<"SISA SALDO PULSA ANDA= ";
+cout<<saldo-30000<<endl;
+}
+else
+{
+cout<<"\nanda tidak memilih 1/2";
+}}
+void tpn(){system("cls");
+cout<<"=========Anda memilih paket Nelpon=========";
+cout<<" "<<"\n";
+cout<<"1. Paket Nelpon LOKAL SEPUASNYA PERMINGGU Rp, 35000 \n";
+cout<<"2. Paket Nelpon LUAR NEGERI PERMINGGU  Rp. 150000\n";
+cout<<"Pilih pakaet yang anda inginkan(1/2): "; cin>>c;
+if (c==1)
+{
+cout<<"Anda Memilih Paket Nelpon LOKAL SEPUASNYA PERMINGGU Rp, 35000\n";
+cout<<"SISA SALDO PULSA ANDA= ";
+cout<<saldo-35000<<endl;
+}
+else if(c==2)
+{
+cout<<"Anda Memilih Paket Nelpon LUAR NEGERI PERMINGGU  Rp. 150000\n";
+cout<<"SISA SALDO PULSA ANDA= ";
+cout<<saldo-150000<<endl;
+}
+else
+{
+cout<<"\nanda harus memilih 1/2";
+}}
+void bgpls(){system("cls");
+cout<<"=========Anda memilih untuk Paket Bagi Pulsa==========";
+cout<<" "<<"\n";
+cout<<"Anda hendak melakukan Bagi Pulsa. Silahkan masukkan nomor tujuan= \n";
+cin>>nomor;
+cout<<"Anda akan Bagi Pulsa ke\n"<< nomor <<"\nSilahkan masukkan nominal pulsa= \n";
+cin>>nominal;
+cout<<"Anda akan Bagi Pulsa ke\n"<<nomor<< "\tsebesar\t"<< nominal<< "\nakan dikenakan biaya kirim sebesar 1.500. untuk melanjutkan,\nsilahkan masukkan angka 4055\n";
+cin>>angka;
+if (nominal<z)
+{
+cout<<"Maaf bagi pulsa tidak dapat dilakukan karena kurang dari\n"<<z;
+}
+else if(nominal>z)
+{
+cout<<"SELAMAT BAGI PULSA BERHASIL\n";
+cout<<"SISA SALDO PULSA ANDA= ";
+cout<<saldo-nominal-1500<<endl;
+}
+else
+{
+cout<<"\nanda tidak memilih 1/2";
+}
+}
+int main(){
+	int y;
+	int pilih,saldo;
+	string usser, pass;
+	char pilihan;
+	selesai:
+	ulang : 
+	cout<<"-------------------------------------------------------------------------\n";
+	cout<<"\t\t\t\t\t\t\t\t\t\n";
+	cout<<"\t\tSELAMAT DATANG DI AULIA CELL  \t\t\n";
+	cout<<"\t\t\t\t\t\t\t\t\t\n";
+  cout<<"\t\tJalin Koneksi Dengan Sesama\t\t\n";
+  cout<<"\t\t\t\t\t\t\t\t\t\n";
+	cout<<"\t\t Masukkan Username : ";
+	cin>>usser;
+	cout<<"\n";
+	cout<<"\t\t Masukkan Password  : ";
+	cin>>pass;
+	cout<<"\t\t\n";
+			if (usser == "AULIA" && pass == "CIKU")
+			{
+				cout<<"\t\tSelamat login anda berhasil\t\t\n";
+			}
+			else
+			{
+				cout<<"\t\t\t Ussername dan password anda salah silahkan coba kembali \t\t\n";
+				cout<<"\t\t\t Coba lagi ?[y/t]  : ";
+				cin>>pilih;
+				cout<<"\t\t\n";
+					if (pilihan=='y' || pilihan=='Y')
+					{system("cls");
+					goto ulang;}
+					if (pilihan=='t' || pilihan=='T')
+					{goto selesai;
+					cout<<endl;}				
+    } 
+	do{
+	listp(list);
+	cout<<"Pilih salah satu paket yang anda inginkan(1/2/3/4): "; cin>>x;
+	switch(x)
+	{
+	case 1: internet();break;
+	case 2: smsan();break;
+	case 3: tpn();break;
+	case 4: bgpls();break;
+	}
+cout<<"\n\n Paket anda sudah aktif. jika anda ingin ke Menu Utama tekan(0): ";cin>>y;}
+while(y==0);
+}
+
+
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
